@@ -1443,7 +1443,7 @@ impl Graph {
             val16
         };
 
-        let idx = 26;
+        let idx = 16;
 
         let ptr = entry_addrs[idx];
 
@@ -1485,11 +1485,11 @@ impl Graph {
             }
         }
 
-        for k in 0..8 {
-            let schem = rom.to_partial_schem((4 * k)..(4 * (k + 1)));
-            let mut file = std::fs::File::create(format!("rom{k}.schem")).unwrap();
-            schem.finish(&mut file).unwrap();
-        }
+        // for k in 0..8 {
+        //     let schem = rom.to_partial_schem((4 * k)..(4 * (k + 1)));
+        //     let mut file = std::fs::File::create(format!("rom{k}.schem")).unwrap();
+        //     schem.finish(&mut file).unwrap();
+        // }
     }
 }
 
